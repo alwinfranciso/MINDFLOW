@@ -1,0 +1,109 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 220 50% 95%; /* #eaeef6 Light grayish blue */
+    --foreground: 207 30% 25%; /* Dark Desaturated Blue for text */
+
+    --card: 0 0% 100%; /* White */
+    --card-foreground: 207 30% 25%;
+
+    --popover: 0 0% 100%; /* White */
+    --popover-foreground: 207 30% 25%;
+
+    --primary: 207 88% 68%; /* #64B5F6 Calm Blue - Default primary for other elements */
+    --primary-foreground: 207 80% 15%;
+
+    --secondary: 207 60% 85%;
+    --secondary-foreground: 207 80% 15%;
+
+    --muted: 207 40% 88%;
+    --muted-foreground: 207 30% 45%;
+
+    --accent: 261 46% 63%; /* #9575CD Soft Violet - Default accent */
+    --accent-foreground: 261 80% 15%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 207 30% 80%;
+    --input: 207 30% 85%;
+    --ring: 207 88% 68%; /* Main page ring color, can be default primary */
+
+    --radius: 0.625rem; /* 10px */
+
+    /* Sidebar specific colors */
+    --sidebar-background: 0 0% 100%; /* #fff White */
+    --sidebar-foreground: 217 14% 48%; /* #6a778e Greyish text */
+    --sidebar-primary: 225 87% 60%; /* #406ff3 Blue for active/hover bg */
+    --sidebar-primary-foreground: 0 0% 100%; /* #fff White for active/hover text */
+    --sidebar-accent: 225 87% 60%; /* #406ff3 Blue for hover bg (consistent) */
+    --sidebar-accent-foreground: 0 0% 100%; /* #fff White for hover text (consistent) */
+    --sidebar-border: 220 30% 88%; /* #dfe3e8 Very light grey border */
+    --sidebar-ring: 225 87% 60%; /* #406ff3 Blue for focus rings in sidebar */
+
+    --chart-1: 207 88% 68%;
+    --chart-2: 261 46% 63%;
+    --chart-3: 173 58% 39%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    /* TODO: Define dark theme colors if needed - current is placeholder */
+    --background: 207 30% 10%;
+    --foreground: 207 88% 94%;
+
+    --card: 207 30% 15%;
+    --card-foreground: 207 88% 94%;
+
+    --popover: 207 30% 15%;
+    --popover-foreground: 207 88% 94%;
+
+    --primary: 207 88% 68%;
+    --primary-foreground: 207 80% 15%;
+
+    --secondary: 207 30% 25%;
+    --secondary-foreground: 207 88% 94%;
+
+    --muted: 207 30% 20%;
+    --muted-foreground: 207 88% 80%;
+
+    --accent: 261 46% 63%;
+    --accent-foreground: 261 80% 15%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 207 30% 30%;
+    --input: 207 30% 25%;
+    --ring: 207 88% 68%;
+
+    /* Sidebar dark theme colors */
+    --sidebar-background: 210 30% 12%; /* Darker blue-gray */
+    --sidebar-foreground: 210 30% 85%; /* Light gray */
+    --sidebar-primary: 225 87% 60%;  /* #406ff3 Blue (can remain same or be adjusted) */
+    --sidebar-primary-foreground: 0 0% 100%; /* White */
+    --sidebar-accent: 225 87% 60%; /* #406ff3 Blue */
+    --sidebar-accent-foreground: 0 0% 100%; /* White */
+    --sidebar-border: 210 30% 25%; /* Darker border */
+    --sidebar-ring: 225 87% 60%; /* Blue */
+    
+    --chart-1: 207 88% 68%;
+    --chart-2: 261 46% 63%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Open Sans', 'PT Sans', sans-serif; /* Added Open Sans as primary */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
